@@ -123,7 +123,7 @@ public class CrearUsuario extends javax.swing.JFrame {
         jLabel7.setText("Rut:");
 
         try {
-            txtRut.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###-H")));
+            txtRut.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###-A")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
