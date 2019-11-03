@@ -54,6 +54,7 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         contenedorBotones = new javax.swing.JPanel();
         btnListaUsuarios = new javax.swing.JButton();
         btnFlujosTarea = new javax.swing.JButton();
@@ -73,11 +74,16 @@ public class Menu extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        contenedorBotones.setBackground(new java.awt.Color(0, 0, 0));
-        contenedorBotones.setLayout(new java.awt.GridLayout(2, 2, 20, 20));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
+        contenedorBotones.setBackground(new java.awt.Color(0, 0, 0));
+        contenedorBotones.setLayout(new java.awt.GridLayout(1, 1, 40, 40));
+
+        btnListaUsuarios.setBackground(new java.awt.Color(204, 204, 204));
         btnListaUsuarios.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        btnListaUsuarios.setText("Mantenedor de Usuarios");
+        btnListaUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portafolio/imagenes/multiple-users-silhouette(3).png"))); // NOI18N
+        btnListaUsuarios.setText("Usuarios");
+        btnListaUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         btnListaUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnListaUsuariosActionPerformed(evt);
@@ -85,8 +91,11 @@ public class Menu extends javax.swing.JFrame {
         });
         contenedorBotones.add(btnListaUsuarios);
 
+        btnFlujosTarea.setBackground(new java.awt.Color(204, 204, 204));
         btnFlujosTarea.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        btnFlujosTarea.setText("Ver Flujos de Tarea");
+        btnFlujosTarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portafolio/imagenes/list(2).png"))); // NOI18N
+        btnFlujosTarea.setText("Flujo de tarea ");
+        btnFlujosTarea.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         btnFlujosTarea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFlujosTareaActionPerformed(evt);
@@ -94,8 +103,11 @@ public class Menu extends javax.swing.JFrame {
         });
         contenedorBotones.add(btnFlujosTarea);
 
+        btnSalir.setBackground(new java.awt.Color(204, 204, 204));
         btnSalir.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        btnSalir.setText("Salir");
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portafolio/imagenes/logout.png"))); // NOI18N
+        btnSalir.setText("Salir ");
+        btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -103,7 +115,24 @@ public class Menu extends javax.swing.JFrame {
         });
         contenedorBotones.add(btnSalir);
 
-        getContentPane().add(contenedorBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 1060, 480));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(contenedorBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 1125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(179, Short.MAX_VALUE)
+                .addComponent(contenedorBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(168, 168, 168))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 1150, 510));
 
         lblFondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\The_S\\Downloads\\2560x1440-2990736-blue-purple-mountains-hexagon-photoshop-2k-peaceful-nature___mixed-wallpapers.jpg")); // NOI18N
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 700));
@@ -185,6 +214,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu fonoMenuTag;
     private javax.swing.JMenu idUsuarioMenuTag;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblFondo;
     private javax.swing.JMenu menuFecha;
     private javax.swing.JMenu menuHora;
