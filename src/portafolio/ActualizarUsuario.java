@@ -245,7 +245,7 @@ public class ActualizarUsuario extends javax.swing.JFrame {
             CallableStatement stmtInsert = cn.prepareCall(" BEGIN update_usuario(?,?,?,?,?,?);END; ");
             stmtInsert.setString(1, lblIDUsuario.getText());
             stmtInsert.setString(2, txtCorreo.getText());
-            stmtInsert.setString(3, txtPass.getPassword().toString());
+            stmtInsert.setString(3,txtPass.getText());
             stmtInsert.setString(4, txtNombre.getText());
             stmtInsert.setString(5, txtApellido.getText());
             stmtInsert.setString(6, txtApellidoMaterno.getText());
