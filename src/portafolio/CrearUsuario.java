@@ -269,16 +269,20 @@ public class CrearUsuario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-            CallableStatement stmtInsert = cn.prepareCall(" BEGIN insert_usuario(?,?,?,?,?,?,?);END; ");
-            stmtInsert.setString(1, txtCorreo.getText().toUpperCase());
-            stmtInsert.setString(2, txtPass.getText());
-            stmtInsert.setString(3, txtRut.getText());
-            stmtInsert.setString(4, txtNombre.getText());
-            stmtInsert.setString(5, txtApellido.getText());
-            stmtInsert.setString(6, txtApellidoMaterno.getText());
-            stmtInsert.setInt(7, cmbCargo.getSelectedIndex() + 1);
-            stmtInsert.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Se ha ingresado al usuario: " + txtNombre.getText() + " " + txtApellido.getText() + " " + txtApellidoMaterno.getText());
+            if (cmbCargo.getSelectedIndex() == 0) {
+                JOptionPane.showMessageDialog(this, "Debe elegir un cargo válido");
+            } else {
+                CallableStatement stmtInsert = cn.prepareCall(" BEGIN insert_usuario(?,?,?,?,?,?,?);END; ");
+                stmtInsert.setString(1, txtCorreo.getText().toUpperCase());
+                stmtInsert.setString(2, txtPass.getText());
+                stmtInsert.setString(3, txtRut.getText());
+                stmtInsert.setString(4, txtNombre.getText());
+                stmtInsert.setString(5, txtApellido.getText());
+                stmtInsert.setString(6, txtApellidoMaterno.getText());
+                stmtInsert.setInt(7, cmbCargo.getSelectedIndex());
+                stmtInsert.executeUpdate();
+                JOptionPane.showMessageDialog(this, "Se ha ingresado al usuario: " + txtNombre.getText() + " " + txtApellido.getText() + " " + txtApellidoMaterno.getText());
+            }
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error: " + ex);
         }

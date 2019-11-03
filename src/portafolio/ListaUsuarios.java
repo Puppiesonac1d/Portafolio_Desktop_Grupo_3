@@ -235,18 +235,18 @@ public class ListaUsuarios extends javax.swing.JFrame {
     private void btnEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarUsuarioActionPerformed
         try {
             int i = tblListaUsuarios.getSelectedRow();
-            if (i != 0) {
+            if (i < 0) {
+                JOptionPane.showMessageDialog(this, "Debe seleccionar un usuario");
+            } else {
+                this.dispose();
                 ActualizarUsuario update = new ActualizarUsuario();
                 update.setVisible(true);
-
                 update.txtCorreo.setText(tblListaUsuarios.getValueAt(i, 1).toString());
                 update.txtPass.setText(tblListaUsuarios.getValueAt(i, 2).toString());
                 update.lblIDUsuario.setText(tblListaUsuarios.getValueAt(i, 3).toString());
                 update.txtNombre.setText(tblListaUsuarios.getValueAt(i, 4).toString());
                 update.txtApellido.setText(tblListaUsuarios.getValueAt(i, 5).toString());
                 update.txtApellidoMaterno.setText(tblListaUsuarios.getValueAt(i, 6).toString());
-            } else {
-                JOptionPane.showMessageDialog(this, "Debe seleccionar un usuario");
             }
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error: " + ex);

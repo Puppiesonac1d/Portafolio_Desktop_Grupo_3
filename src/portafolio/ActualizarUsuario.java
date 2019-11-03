@@ -237,8 +237,8 @@ public class ActualizarUsuario extends javax.swing.JFrame {
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         this.dispose();
-        MantenedorUsuarios mantenedor = new MantenedorUsuarios();
-        mantenedor.setVisible(true);
+        ListaUsuarios lista = new ListaUsuarios();
+        lista.setVisible(true);
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -246,7 +246,7 @@ public class ActualizarUsuario extends javax.swing.JFrame {
             CallableStatement stmtInsert = cn.prepareCall(" BEGIN update_usuario(?,?,?,?,?,?);END; ");
             stmtInsert.setString(1, lblIDUsuario.getText());
             stmtInsert.setString(2, txtCorreo.getText());
-            stmtInsert.setString(3,txtPass.getText());
+            stmtInsert.setString(3, txtPass.getText());
             stmtInsert.setString(4, txtNombre.getText());
             stmtInsert.setString(5, txtApellido.getText());
             stmtInsert.setString(6, txtApellidoMaterno.getText());
