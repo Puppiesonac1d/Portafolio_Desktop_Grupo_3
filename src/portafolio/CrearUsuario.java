@@ -76,7 +76,8 @@ public class CrearUsuario extends javax.swing.JFrame {
         fonoMenuTag = new javax.swing.JMenu();
         idUsuarioMenuTag = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         contenedorBotones.setBackground(new java.awt.Color(0, 0, 0));

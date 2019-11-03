@@ -87,6 +87,7 @@ public class FlujosPendientes extends javax.swing.JFrame {
         idUsuarioMenuTag = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         contenedorBotones.setBackground(new java.awt.Color(0, 0, 0));

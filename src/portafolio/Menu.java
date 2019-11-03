@@ -68,7 +68,7 @@ public class Menu extends javax.swing.JFrame {
         fonoMenuTag = new javax.swing.JMenu();
         idUsuarioMenuTag = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
