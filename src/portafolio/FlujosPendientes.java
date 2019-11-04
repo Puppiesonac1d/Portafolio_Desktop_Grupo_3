@@ -24,14 +24,14 @@ import oracle.jdbc.OracleTypes;
  * @author The_S
  */
 public class FlujosPendientes extends javax.swing.JFrame {
-
+    
     Conexion con = new Conexion();
     Connection cn = con.Conecta();
-
+    
     public FlujosPendientes() {
         initComponents();
         try {
-            CallableStatement stmt = cn.prepareCall("BEGIN listar_flujo(?); END;");
+            CallableStatement stmt = cn.prepareCall("BEGIN listar_flujo_cambiar_estado(?); END;");
             stmt.registerOutParameter(1, OracleTypes.CURSOR); //REF CURSOR
             stmt.execute();
             ResultSet rs = ((OracleCallableStatement) stmt).getCursor(1);
@@ -47,9 +47,9 @@ public class FlujosPendientes extends javax.swing.JFrame {
         Timer tiempo = new Timer(100, (ActionListener) new FlujosPendientes.horas());
         tiempo.start();
     }
-
+    
     class horas implements ActionListener {
-
+        
         @Override
         public void actionPerformed(ActionEvent e) {
             java.util.Date sistHora = new java.util.Date();
@@ -217,31 +217,32 @@ public class FlujosPendientes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
-
+        
 
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
             String estado = jComboBox1.getSelectedItem().toString();
-            int id = tblFlujos.getSelectedRow() + 1;
+            int id = tblFlujos.getSelectedRow();
+            int index = Integer.parseInt(tblFlujos.getValueAt(id, 0).toString());
             System.out.println(estado);
             System.out.println(id);
             if (jComboBox1.getSelectedIndex() == 0) {
                 JOptionPane.showMessageDialog(this, "Seleccione una opción válida");
             } else {
-                CallableStatement stmtInsert = cn.prepareCall(" BEGIN update_flujo(?,?);END; ");
-                stmtInsert.setInt(1, id);
+                CallableStatement stmtInsert = cn.prepareCall(" BEGIN update_flujo_estado(?,?);END; ");
+                stmtInsert.setInt(1, index);
                 stmtInsert.setString(2, estado);
                 stmtInsert.executeUpdate();
                 JOptionPane.showMessageDialog(this, "Se ha actualizado el flujo de tarea");
             }
-
+            
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error: " + ex);
         }
         try {
-            CallableStatement stmt = cn.prepareCall("BEGIN listar_flujo(?); END;");
+            CallableStatement stmt = cn.prepareCall("BEGIN listar_flujo_cambiar_estado(?); END;");
             stmt.registerOutParameter(1, OracleTypes.CURSOR); //REF CURSOR
             stmt.execute();
             ResultSet rs = ((OracleCallableStatement) stmt).getCursor(1);
@@ -249,7 +250,7 @@ public class FlujosPendientes extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error: " + ex);
         }
-
+        
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
