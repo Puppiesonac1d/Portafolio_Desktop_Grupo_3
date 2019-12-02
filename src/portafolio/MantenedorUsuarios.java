@@ -5,6 +5,7 @@
  */
 package portafolio;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -56,10 +57,9 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
 
         contenedorBotones = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        btnSalir = new javax.swing.JButton();
         btnListaUsuarios = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        lblFondo = new javax.swing.JLabel();
+        btnSalir = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuHora = new javax.swing.JMenu();
         menuFecha = new javax.swing.JMenu();
@@ -69,93 +69,101 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
         idUsuarioMenuTag = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMinimumSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        contenedorBotones.setBackground(new java.awt.Color(0, 0, 0));
+        contenedorBotones.setBackground(new java.awt.Color(51, 51, 51));
+        contenedorBotones.setPreferredSize(new java.awt.Dimension(1280, 720));
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0, 20, 0));
 
-        btnSalir.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        btnSalir.setText("Volver al menú principal");
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirActionPerformed(evt);
+        btnListaUsuarios.setBackground(new java.awt.Color(102, 102, 102));
+        btnListaUsuarios.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        btnListaUsuarios.setForeground(new java.awt.Color(204, 204, 204));
+        btnListaUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portafolio/imagenes/multiple-users-silhouette(3).png"))); // NOI18N
+        btnListaUsuarios.setText("Lista de Usuarios");
+        btnListaUsuarios.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        btnListaUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnListaUsuariosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnListaUsuariosMouseExited(evt);
             }
         });
-
-        btnListaUsuarios.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        btnListaUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portafolio/imagenes/multiple-users-silhouette(2).png"))); // NOI18N
-        btnListaUsuarios.setText("Lista de Usuarios");
         btnListaUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnListaUsuariosActionPerformed(evt);
             }
         });
+        jPanel1.add(btnListaUsuarios);
 
+        jButton2.setBackground(new java.awt.Color(102, 102, 102));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(204, 204, 204));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portafolio/imagenes/user-silhouette.png"))); // NOI18N
         jButton2.setText("Agregar nuevo usuario");
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton2MouseExited(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSalir))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(btnListaUsuarios)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                        .addComponent(jButton2)))
-                .addGap(20, 20, 20))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnListaUsuarios)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnSalir)
-                .addContainerGap(115, Short.MAX_VALUE))
-        );
+        btnSalir.setBackground(new java.awt.Color(102, 102, 102));
+        btnSalir.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(204, 204, 204));
+        btnSalir.setText("Volver al menú principal");
+        btnSalir.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        btnSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSalirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSalirMouseExited(evt);
+            }
+        });
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSalir);
 
         javax.swing.GroupLayout contenedorBotonesLayout = new javax.swing.GroupLayout(contenedorBotones);
         contenedorBotones.setLayout(contenedorBotonesLayout);
         contenedorBotonesLayout.setHorizontalGroup(
             contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contenedorBotonesLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorBotonesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1256, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         contenedorBotonesLayout.setVerticalGroup(
             contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedorBotonesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(250, 250, 250)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(246, Short.MAX_VALUE))
         );
 
-        getContentPane().add(contenedorBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 1060, 480));
-
-        lblFondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\The_S\\Downloads\\2560x1440-2990736-blue-purple-mountains-hexagon-photoshop-2k-peaceful-nature___mixed-wallpapers.jpg")); // NOI18N
-        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 700));
-
         menuHora.setText(" Hora: ");
+        menuHora.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jMenuBar1.add(menuHora);
 
         menuFecha.setText(" Fecha: ");
+        menuFecha.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jMenuBar1.add(menuFecha);
         jMenuBar1.add(codigoAutorizacionMenuTag);
         jMenuBar1.add(contactoMenuTag);
@@ -163,6 +171,17 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
         jMenuBar1.add(idUsuarioMenuTag);
 
         setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(contenedorBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(contenedorBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 687, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -184,6 +203,30 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
         usuario.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnSalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseEntered
+        btnSalir.setBackground(new Color(32, 140, 204));
+    }//GEN-LAST:event_btnSalirMouseEntered
+
+    private void btnSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseExited
+        btnSalir.setBackground(new Color(102, 102, 102));
+    }//GEN-LAST:event_btnSalirMouseExited
+
+    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+        jButton2.setBackground(new Color(32, 140, 204));
+    }//GEN-LAST:event_jButton2MouseEntered
+
+    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+        jButton2.setBackground(new Color(102, 102, 102));
+    }//GEN-LAST:event_jButton2MouseExited
+
+    private void btnListaUsuariosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaUsuariosMouseEntered
+        btnListaUsuarios.setBackground(new Color(32, 140, 204));
+    }//GEN-LAST:event_btnListaUsuariosMouseEntered
+
+    private void btnListaUsuariosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaUsuariosMouseExited
+        btnListaUsuarios.setBackground(new Color(102, 102, 102));
+    }//GEN-LAST:event_btnListaUsuariosMouseExited
 
     /**
      * @param args the command line arguments
@@ -231,7 +274,6 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblFondo;
     private javax.swing.JMenu menuFecha;
     private javax.swing.JMenu menuHora;
     // End of variables declaration//GEN-END:variables

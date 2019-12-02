@@ -5,6 +5,7 @@
  */
 package portafolio;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -59,7 +60,6 @@ public class Menu extends javax.swing.JFrame {
         btnListaUsuarios = new javax.swing.JButton();
         btnFlujosTarea = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        lblFondo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuHora = new javax.swing.JMenu();
         menuFecha = new javax.swing.JMenu();
@@ -71,19 +71,27 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
-        setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        contenedorBotones.setBackground(new java.awt.Color(0, 0, 0));
-        contenedorBotones.setLayout(new java.awt.GridLayout(1, 1, 40, 40));
+        contenedorBotones.setBackground(new java.awt.Color(102, 102, 102));
+        contenedorBotones.setLayout(new java.awt.GridLayout(3, 1, 40, 20));
 
-        btnListaUsuarios.setBackground(new java.awt.Color(204, 204, 204));
-        btnListaUsuarios.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        btnListaUsuarios.setBackground(new java.awt.Color(102, 102, 102));
+        btnListaUsuarios.setFont(new java.awt.Font("Dialog", 0, 40)); // NOI18N
+        btnListaUsuarios.setForeground(new java.awt.Color(204, 204, 204));
         btnListaUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portafolio/imagenes/multiple-users-silhouette(3).png"))); // NOI18N
         btnListaUsuarios.setText("Usuarios");
-        btnListaUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        btnListaUsuarios.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        btnListaUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnListaUsuariosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnListaUsuariosMouseExited(evt);
+            }
+        });
         btnListaUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnListaUsuariosActionPerformed(evt);
@@ -91,11 +99,20 @@ public class Menu extends javax.swing.JFrame {
         });
         contenedorBotones.add(btnListaUsuarios);
 
-        btnFlujosTarea.setBackground(new java.awt.Color(204, 204, 204));
-        btnFlujosTarea.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        btnFlujosTarea.setBackground(new java.awt.Color(102, 102, 102));
+        btnFlujosTarea.setFont(new java.awt.Font("Dialog", 0, 40)); // NOI18N
+        btnFlujosTarea.setForeground(new java.awt.Color(204, 204, 204));
         btnFlujosTarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portafolio/imagenes/list(2).png"))); // NOI18N
         btnFlujosTarea.setText("Flujo de tarea ");
-        btnFlujosTarea.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        btnFlujosTarea.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        btnFlujosTarea.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnFlujosTareaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnFlujosTareaMouseExited(evt);
+            }
+        });
         btnFlujosTarea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFlujosTareaActionPerformed(evt);
@@ -103,11 +120,20 @@ public class Menu extends javax.swing.JFrame {
         });
         contenedorBotones.add(btnFlujosTarea);
 
-        btnSalir.setBackground(new java.awt.Color(204, 204, 204));
-        btnSalir.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        btnSalir.setBackground(new java.awt.Color(102, 102, 102));
+        btnSalir.setFont(new java.awt.Font("Dialog", 0, 40)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(204, 204, 204));
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portafolio/imagenes/logout.png"))); // NOI18N
         btnSalir.setText("Salir ");
-        btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        btnSalir.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        btnSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSalirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSalirMouseExited(evt);
+            }
+        });
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -120,34 +146,50 @@ public class Menu extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(contenedorBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 1125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addComponent(contenedorBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(660, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(179, Short.MAX_VALUE)
-                .addComponent(contenedorBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(168, 168, 168))
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addComponent(contenedorBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 1150, 510));
-
-        lblFondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\The_S\\Downloads\\2560x1440-2990736-blue-purple-mountains-hexagon-photoshop-2k-peaceful-nature___mixed-wallpapers.jpg")); // NOI18N
-        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 700));
-
         menuHora.setText(" Hora: ");
+        menuHora.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jMenuBar1.add(menuHora);
 
         menuFecha.setText(" Fecha: ");
+        menuFecha.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jMenuBar1.add(menuFecha);
+
+        codigoAutorizacionMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(codigoAutorizacionMenuTag);
+
+        contactoMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(contactoMenuTag);
+
+        fonoMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(fonoMenuTag);
+
+        idUsuarioMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(idUsuarioMenuTag);
 
         setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -168,6 +210,30 @@ public class Menu extends javax.swing.JFrame {
         flujos.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnFlujosTareaActionPerformed
+
+    private void btnListaUsuariosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaUsuariosMouseEntered
+        btnListaUsuarios.setBackground(new Color(32, 140, 204));
+    }//GEN-LAST:event_btnListaUsuariosMouseEntered
+
+    private void btnListaUsuariosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaUsuariosMouseExited
+        btnListaUsuarios.setBackground(new Color(102, 102, 102));
+    }//GEN-LAST:event_btnListaUsuariosMouseExited
+
+    private void btnFlujosTareaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFlujosTareaMouseEntered
+        btnFlujosTarea.setBackground(new Color(32, 140, 204));
+    }//GEN-LAST:event_btnFlujosTareaMouseEntered
+
+    private void btnFlujosTareaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFlujosTareaMouseExited
+        btnFlujosTarea.setBackground(new Color(102, 102, 102));
+    }//GEN-LAST:event_btnFlujosTareaMouseExited
+
+    private void btnSalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseEntered
+        btnSalir.setBackground(new Color(32, 140, 204));
+    }//GEN-LAST:event_btnSalirMouseEntered
+
+    private void btnSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseExited
+        btnSalir.setBackground(new Color(102, 102, 102));
+    }//GEN-LAST:event_btnSalirMouseExited
 
     /**
      * @param args the command line arguments
@@ -215,7 +281,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu idUsuarioMenuTag;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblFondo;
     private javax.swing.JMenu menuFecha;
     private javax.swing.JMenu menuHora;
     // End of variables declaration//GEN-END:variables
