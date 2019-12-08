@@ -23,7 +23,7 @@ public class Conexion {
             System.exit(1);
         }
         try {
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XE", "HR", "HR");
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XE", "portafolio", "portafolio");
             System.out.println("Conectado con éxito");
         } catch (Exception e) {
             System.out.println("ERROR " + e.getMessage());
