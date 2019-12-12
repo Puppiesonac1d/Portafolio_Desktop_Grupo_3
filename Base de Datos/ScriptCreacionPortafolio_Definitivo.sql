@@ -1,12 +1,10 @@
 --------------------------------------------------------
 -- Archivo creado  - miércoles-diciembre-11-2019   
 --------------------------------------------------------
-CREATE USER PORTAFOLIO IDENTIFIED BY PORTAFOLIO;
-GRANT CONNECT TO PORTAFOLIO;
-GRANT CREATE SESSION TO PORTAFOLIO;
-GRANT ALL PRIVILEGES TO PORTAFOLIO;
-
-
+CREATE USER portafolio IDENTIFIED BY portafolio;
+GRANT CONNECT TO portafolio;
+GRANT CREATE SESSION TO portafolio;
+GRANT ALL PRIVILEGES TO portafolio;
 
 DROP SEQUENCE "PORTAFOLIO"."DEPARTMENTS_SEQ";
 DROP SEQUENCE "PORTAFOLIO"."EMPLOYEES_SEQ";
