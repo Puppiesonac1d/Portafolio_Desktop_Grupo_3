@@ -84,9 +84,9 @@ public class ListaUsuarios extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1280, 720));
         setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        contenedorBotones.setBackground(new java.awt.Color(51, 51, 51));
+        contenedorBotones.setBackground(new java.awt.Color(58, 175, 169));
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(43, 122, 120));
 
         btnSalir.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         btnSalir.setText("Volver a mantenedor");
@@ -154,7 +154,7 @@ public class ListaUsuarios extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 613, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnBorrarUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -181,13 +181,23 @@ public class ListaUsuarios extends javax.swing.JFrame {
         );
 
         menuHora.setText(" Hora: ");
+        menuHora.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(menuHora);
 
         menuFecha.setText(" Fecha: ");
+        menuFecha.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(menuFecha);
+
+        codigoAutorizacionMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(codigoAutorizacionMenuTag);
+
+        contactoMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(contactoMenuTag);
+
+        fonoMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(fonoMenuTag);
+
+        idUsuarioMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(idUsuarioMenuTag);
 
         setJMenuBar(jMenuBar1);

@@ -71,11 +71,10 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
-        setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(58, 175, 169));
 
-        contenedorBotones.setBackground(new java.awt.Color(102, 102, 102));
+        contenedorBotones.setBackground(new java.awt.Color(43, 122, 120));
         contenedorBotones.setLayout(new java.awt.GridLayout(3, 1, 40, 20));
 
         btnListaUsuarios.setBackground(new java.awt.Color(102, 102, 102));
@@ -147,8 +146,8 @@ public class Menu extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(contenedorBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(660, Short.MAX_VALUE))
+                .addComponent(contenedorBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 1248, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,11 +158,11 @@ public class Menu extends javax.swing.JFrame {
         );
 
         menuHora.setText(" Hora: ");
-        menuHora.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        menuHora.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(menuHora);
 
         menuFecha.setText(" Fecha: ");
-        menuFecha.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        menuFecha.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(menuFecha);
 
         codigoAutorizacionMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N

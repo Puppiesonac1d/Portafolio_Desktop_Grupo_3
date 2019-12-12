@@ -8,7 +8,7 @@
           <Properties>
             <Property name="text" type="java.lang.String" value=" Hora: "/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="20" style="0"/>
+              <Font name="Tahoma" size="20" style="1"/>
             </Property>
           </Properties>
         </Menu>
@@ -16,7 +16,7 @@
           <Properties>
             <Property name="text" type="java.lang.String" value=" Fecha: "/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="20" style="0"/>
+              <Font name="Tahoma" size="20" style="1"/>
             </Property>
           </Properties>
         </Menu>
@@ -59,9 +59,6 @@
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1280, 720]"/>
     </Property>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1280, 720]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -96,17 +93,17 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="33" red="33" type="rgb"/>
+          <Color blue="a9" green="af" red="3a" type="rgb"/>
         </Property>
       </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="contenedorBotones" min="-2" pref="600" max="-2" attributes="0"/>
-                  <EmptySpace pref="660" max="32767" attributes="0"/>
+                  <Component id="contenedorBotones" pref="1248" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -124,7 +121,7 @@
         <Container class="javax.swing.JPanel" name="contenedorBotones">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="66" red="66" type="rgb"/>
+              <Color blue="78" green="7a" red="2b" type="rgb"/>
             </Property>
           </Properties>
 

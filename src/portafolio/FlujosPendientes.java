@@ -90,10 +90,10 @@ public class FlujosPendientes extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1280, 720));
         setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        contenedorBotones.setBackground(new java.awt.Color(51, 51, 51));
+        contenedorBotones.setBackground(new java.awt.Color(58, 175, 169));
         contenedorBotones.setPreferredSize(new java.awt.Dimension(1220, 610));
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(43, 122, 120));
         jPanel1.setMinimumSize(new java.awt.Dimension(1280, 720));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 720));
 
@@ -210,7 +210,7 @@ public class FlujosPendientes extends javax.swing.JFrame {
             contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedorBotonesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 628, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, Short.MAX_VALUE)
                 .addGap(60, 60, 60))
         );
 
@@ -244,7 +244,7 @@ public class FlujosPendientes extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenedorBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addComponent(contenedorBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 710, Short.MAX_VALUE)
         );
 
         pack();

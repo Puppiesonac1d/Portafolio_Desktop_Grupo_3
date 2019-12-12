@@ -70,12 +70,11 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1280, 720));
-        setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        contenedorBotones.setBackground(new java.awt.Color(51, 51, 51));
+        contenedorBotones.setBackground(new java.awt.Color(58, 175, 169));
         contenedorBotones.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(43, 122, 120));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new java.awt.GridLayout(1, 0, 20, 0));
 
@@ -147,27 +146,35 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
             contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorBotonesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1256, Short.MAX_VALUE)
                 .addContainerGap())
         );
         contenedorBotonesLayout.setVerticalGroup(
             contenedorBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedorBotonesLayout.createSequentialGroup()
                 .addGap(250, 250, 250)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(246, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                .addGap(246, 246, 246))
         );
 
         menuHora.setText(" Hora: ");
-        menuHora.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        menuHora.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(menuHora);
 
         menuFecha.setText(" Fecha: ");
-        menuFecha.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        menuFecha.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(menuFecha);
+
+        codigoAutorizacionMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(codigoAutorizacionMenuTag);
+
+        contactoMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(contactoMenuTag);
+
+        fonoMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(fonoMenuTag);
+
+        idUsuarioMenuTag.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jMenuBar1.add(idUsuarioMenuTag);
 
         setJMenuBar(jMenuBar1);
@@ -180,7 +187,7 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenedorBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 687, Short.MAX_VALUE)
+            .addComponent(contenedorBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 689, Short.MAX_VALUE)
         );
 
         pack();

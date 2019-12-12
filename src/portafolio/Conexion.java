@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 
 /**
  *
- * @author The_S
+ * @author Diego González
  */
 public class Conexion {
 
@@ -19,7 +19,7 @@ public class Conexion {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
         } catch (ClassNotFoundException e) {
-            System.out.println("Oops! Can't find class oracle.jdbc.driver.OracleDriver");
+            System.out.println("No se puede conectar a oracle");
             System.exit(1);
         }
         try {
