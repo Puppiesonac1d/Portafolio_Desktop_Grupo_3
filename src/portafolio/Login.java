@@ -187,6 +187,7 @@ public class Login extends javax.swing.JFrame {
             } else {
                 confirmado = false;
                 JOptionPane.showMessageDialog(this, "Usuario o contraseña inválidos");
+                 confirmado = true;
             }
 
         } catch (SQLException ex) {
